@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.4.1" client="site" method="upgrade">
+	<name>Monitor Activity</name>
+	<author>Joseph P. Gibson</author>
+	<creationDate>January 2018</creationDate>
+	<copyright>@copyright Copyright (C) 2015 Joseph P. Gibson. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later;  see LICENSE.txt</license>
+	<authorEmail>joe@joesboat.org</authorEmail>
+	<authorUrl>www.joesboat.org</authorUrl>
+	<version>1.0</version>
+	<description>Monitor a page&apos;s activity.  Creates a log file entry each time this module is accessed.  All logs are stored in the &apos;logs&apos; folder.</description>
+	<files>
+		<filename module="mod_monitor_activity">mod_monitor_activity.php</filename>
+		<filename>index.html</filename>
+		<filename>helper.php</filename>
+		<folder>tmpl</folder>
+	</files>
+	<config>
+		<fields name="params">	
+			<fieldset name="debug" label="Debug Controls">
+	        	<field name="siteLog" type="text" size="1" label="Activate Logging" description="Set to 1(true) to activate logging in template routines."/>
+			</fieldset>
+			<fieldset name="monitors" label="Specify monitor products.">
+				<field 
+					name="logFile"
+					type="text"
+					label="Log File Name"
+					size= "25"
+					description="Specify the file name where page usage data is stored.  Note that all log files are created in the /logs folder. "
+				/>	
+			</fieldset>
+		</fields>		
+	</config>
+</extension>
